@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mohamed S — Full-Stack Developer & Creative Designer. Explore my portfolio of projects, skills, and experience." />
+  <title>Mohamed s| Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span>MAD<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" id="nav-cta-btn">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Available for work
+      </div>
+      <h1 class="hero-title reveal-up">
+        Hi, I'm <span class="gradient-text">Mohamed Dhanish</span>
+      </h1>
+      <div class="hero-subtitle reveal-up">
+        <span>I build </span>
+        <span class="typed-wrapper">
+          <span class="typed-text" id="typed"></span>
+          <span class="typed-cursor">|</span>
+        </span>
+      </div>
+      <p class="hero-desc reveal-up">
+        A passionate full-stack developer crafting elegant digital experiences with clean code and creative design.
+        Turning ideas into reality.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#projects" class="btn btn-primary" id="view-work-btn">
+          <span>View My Work</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="contact-hero-btn">
+          <span>Get In Touch</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-avatar-wrapper reveal-right">
+        <div class="avatar-glow"></div>
+        <div class="hero-avatar" id="hero-avatar">
+          <div class="avatar-inner">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="220" height="220">
+              <circle cx="100" cy="80" r="45" fill="url(#avatarGrad)" />
+              <ellipse cx="100" cy="175" rx="65" ry="40" fill="url(#avatarGrad)" />
+              <defs>
+                <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#a855f7" />
+                  <stop offset="100%" style="stop-color:#06b6d4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <!-- Floating badges -->
+        <div class="float-badge float-badge-1">
+          <span class="fb-icon">⚡</span>
+          <div>
+            <div class="fb-num">19+</div>
+            <div class="fb-label">Age</div>
+          </div>
+        </div>
+        <div class="float-badge float-badge-2">
+          <span class="fb-icon">🚀</span>
+          <div>
+            <div class="fb-num">3+mon</div>
+            <div class="fb-label">Experience</div>
+          </div>
+        </div>
+        <div class="float-badge float-badge-3">
+          <span class="fb-icon">⭐</span>
+          <div>
+            <div class="fb-num">100%</div>
+            <div class="fb-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll down</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label reveal-up">Get to know me</p>
+        <h2 class="section-title reveal-up">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col reveal-left">
+          <div class="about-img-wrapper">
+            <div class="about-img-bg"></div>
+            <div class="about-img">
+              <svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <!-- Code editor mockup -->
+                <rect x="10" y="10" width="280" height="330" rx="12" fill="#1a1a2e" />
+                <rect x="10" y="10" width="280" height="35" rx="12" fill="#16213e" />
+                <rect x="10" y="35" width="280" height="10" fill="#16213e" />
+                <circle cx="32" cy="27" r="6" fill="#ff5f57" />
+                <circle cx="52" cy="27" r="6" fill="#febc2e" />
+                <circle cx="72" cy="27" r="6" fill="#28c840" />
+                <text x="30" y="75" fill="#6272a4" font-family="monospace" font-size="12">01</text>
+                <text x="55" y="75" fill="#ff79c6" font-family="monospace" font-size="12">const</text>
+                <text x="105" y="75" fill="#f8f8f2" font-family="monospace" font-size="12">developer</text>
+                <text x="195" y="75" fill="#ff79c6" font-family="monospace" font-size="12">=</text>
+                <text x="215" y="75" fill="#ff79c6" font-family="monospace" font-size="12">{</text>
+                <text x="30" y="100" fill="#6272a4" font-family="monospace" font-size="12">02</text>
+                <text x="55" y="100" fill="#50fa7b" font-family="monospace" font-size="12"> name:</text>
+                <text x="120" y="100" fill="#f1fa8c" font-family="monospace" font-size="12">"Mohamed Dhanish S"</text>
+                <text x="30" y="125" fill="#6272a4" font-family="monospace" font-size="12">03</text>
+                <text x="55" y="125" fill="#50fa7b" font-family="monospace" font-size="12"> role:</text>
+                <text x="110" y="125" fill="#f1fa8c" font-family="monospace" font-size="12">"Full-Stack Dev"</text>
+                <text x="30" y="150" fill="#6272a4" font-family="monospace" font-size="12">04</text>
+                <text x="55" y="150" fill="#50fa7b" font-family="monospace" font-size="12"> skills:</text>
+                <text x="125" y="150" fill="#8be9fd" font-family="monospace" font-size="12">creative web design</text>
+                <text x="30" y="175" fill="#6272a4" font-family="monospace" font-size="12">05</text>
+                <text x="55" y="175" fill="#50fa7b" font-family="monospace" font-size="12"> passion:</text>
+                <text x="130" y="175" fill="#f1fa8c" font-family="monospace" font-size="12">"Building"</text>
+                <text x="30" y="200" fill="#6272a4" font-family="monospace" font-size="12">06</text>
+                <text x="55" y="200" fill="#50fa7b" font-family="monospace" font-size="12"> gaining:</text>
+                <text x="120" y="200" fill="#8be9fd" font-family="monospace" font-size="12">knowledge</text>
+                <text x="30" y="225" fill="#6272a4" font-family="monospace" font-size="12">07</text>
+                <text x="55" y="225" fill="#ff79c6" font-family="monospace" font-size="12">}</text>
+                <rect x="55" y="240" width="8" height="18" rx="1" fill="#bd93f9" opacity="0.8">
+                  <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite" />
+                </rect>
+              </svg>
+            </div>
+            <div class="about-exp-badge">
+              <span class="exp-num">NEW</span>
+              <span class="exp-text">Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col reveal-right">
+          <h3 class="about-heading">Full-Stack Developer & Creative Thinker</h3>
+          <p class="about-desc">
+            I'm a passionate developer with a love for building beautiful, functional web applications.
+          </p>
+          <p class="about-desc">
+            When I'm not writing code, you'll find me exploring new technologies, video editing. I believe great
+            software is born at the intersection of technical excellence and
+            thoughtful design.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Name</span>
+              <span class="info-value">Mohamed Dhanish S</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-value">Sivakasi, India 🇮🇳</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Experience</span>
+              <span class="info-value">new to this</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Availability</span>
+              <span class="info-value available">Open to Work ✅</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary" id="about-contact-btn">
+            <span>Let's Talk</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      </di </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label reveal-up">What I've built</p>
+        <h2 class="section-title reveal-up">My <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <div class="project-card reveal-up" data-category="web" id="proj-1">
+          <div class="project-img">
+            <div class="project-img-bg" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View Project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="#" class="project-link-btn" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+            <div class="project-icon-display">🛒</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">A full-featured online store with payment integration, admin dashboard, and
+              real-time inventory management.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="web" id="proj-2">
+          <div class="project-img">
+            <div class="project-img-bg" style="background: linear-gradient(135deg, #11998e, #38ef7d);"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View Project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="#" class="project-link-btn" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+            <div class="project-icon-display">📊</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">Chart.js</span>
+            </div>
+            <h3 class="project-title">Analytics Dashboard</h3>
+            <p class="project-desc">Real-time analytics platform with interactive charts, data filtering, and exportable
+              reports for businesses.</p>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="project-card reveal-up" data-category="web" id="proj-5">
+          <div class="project-img">
+            <div class="project-img-bg" style="background: linear-gradient(135deg, #fa709a, #fee140);"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View Project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="#" class="project-link-btn" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+            <div class="project-icon-display">🤖</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">OpenAI</span><span class="tag">FastAPI</span>
+            </div>
+            <h3 class="project-title">AI Chat Assistant</h3>
+            <p class="project-desc">GPT-powered chatbot with custom persona training, multi-language support, and
+              conversation history.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label reveal-up">Don't be shy</p>
+        <h2 class="section-title reveal-up">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">Have a project in mind or just want to chat? My inbox is always open. I'll get back
+            to you as soon as possible!</p>
+          <div class="contact-cards">
+            <div class="contact-card" id="contact-email-card">
+              <div class="cc-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <div class="cc-label">Email</div>
+                <div class="cc-value">dhilfazain@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-card" id="contact-location-card">
+              <div class="cc-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div class="cc-label">Location</div>
+                <div class="cc-value">Sivakasi, India 🇮🇳</div>
+              </div>
+            </div>
+            <div class="contact-card" id="contact-phone-card">
+              <div class="cc-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.52 12 19.79 19.79 0 01.43 3.24a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <div class="cc-label">Response Time</div>
+                <div class="cc-value">Within 24 hours</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <form class="contact-form glass-card" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="NAME" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="name@example.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-phone">Mobile Number</label>
+                <input type="tel" id="cf-phone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" name="subject" placeholder="Project Inquiry" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+            <div class="form-success" id="form-success">
+              <span>✅ Message sent successfully! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>MAD<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-text">Crafted with DHANISH</p>
+        <p class="footer-copy">© 2026. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
