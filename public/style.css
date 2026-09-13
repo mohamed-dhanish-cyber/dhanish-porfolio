@@ -278,11 +278,11 @@ body:has(a:hover, button:hover) .cursor-follower { width: 52px; height: 52px; bo
   /* Animated gradient on the text */
   background: linear-gradient(
     90deg,
-    #a855f7 0%,
-    #06b6d4 25%,
-    #ec4899 50%,
-    #a855f7 75%,
-    #06b6d4 100%
+    #9333ea 0%,
+    #3b82f6 33%,
+    #06b6d4 66%,
+    #10b981 100%,
+    #9333ea 200%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;

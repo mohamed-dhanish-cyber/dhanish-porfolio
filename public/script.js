@@ -323,22 +323,22 @@ function updateActiveNavLink() {
       method: 'GET',
       mode: 'no-cors'
     })
-    .then(() => {
-      submitBtn.innerHTML = originalHTML;
-      submitBtn.disabled = false;
-      form.reset();
-      if (successMsg) {
-        successMsg.innerHTML = '<span>✅ Message sent successfully! I\'ll get back to you soon.</span>';
-        successMsg.classList.add('show');
-        setTimeout(() => successMsg.classList.remove('show'), 4000);
-      }
-    })
-    .catch(error => {
-      console.error('Submission error:', error);
-      submitBtn.innerHTML = originalHTML;
-      submitBtn.disabled = false;
-      alert('Oops! There was an issue sending your message. Please try again.');
-    });
+      .then(() => {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.disabled = false;
+        form.reset();
+        if (successMsg) {
+          successMsg.innerHTML = '<span>✅ Message sent successfully! I\'ll get back to you soon.</span>';
+          successMsg.classList.add('show');
+          setTimeout(() => successMsg.classList.remove('show'), 4000);
+        }
+      })
+      .catch(error => {
+        console.error('Submission error:', error);
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.disabled = false;
+        alert('Oops! There was an issue sending your message. Please try again.');
+      });
   });
 
   function shakeForm(el) {
